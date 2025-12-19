@@ -102,6 +102,13 @@
                         </li>
 
                         <li class="sidebar-item">
+                            <a href="{{ url('/employees') }}" class='sidebar-link'>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Pacullers</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
                             <a href="{{ url('/roles') }}" class='sidebar-link'>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Roles</span>

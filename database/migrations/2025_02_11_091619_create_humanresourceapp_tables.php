@@ -104,7 +104,7 @@ return new class extends Migration
             $table->softDeletes();
         });
 
-        Schema::create('kongdoms', function (Blueprint $table) {
+        Schema::create('kingdoms', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->timestamps();
@@ -115,7 +115,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->foreignId('category_id')->constrained('item_categories');
-            $table->foreignId('kongdom_id')->constrained('kongdoms');
+            $table->foreignId('kingdom_id')->constrained('kingdoms');
             $table->decimal('rate', 10, 2);
             $table->string('status');
             $table->timestamps();
@@ -127,7 +127,7 @@ return new class extends Migration
     {
         // Drop all the tables in reverse order
         Schema::dropIfExists('items');
-        Schema::dropIfExists('kongdoms');
+        Schema::dropIfExists('kingdoms');
         Schema::dropIfExists('item_categories');
         Schema::dropIfExists('leave_requests');
         Schema::dropIfExists('presences');

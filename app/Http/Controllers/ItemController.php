@@ -27,7 +27,7 @@ class ItemController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'category_id' => 'required|exists:item_categories,id',
-            'kingdom_id' => 'required|exists:kongdoms,id',
+            'kingdom_id' => 'required|exists:kingdoms,id',
             'rate' => 'required|numeric',
             'status' => 'required|string|max:255',
         ]);

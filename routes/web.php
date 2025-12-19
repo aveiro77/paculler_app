@@ -35,7 +35,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('roles', RoleController::class)->middleware(['role:HR,Developer']);
 
     // Resource routes for employees
-    Route::resource('employees', EmployeeController::class)->middleware(['role:HR']);
+    Route::resource('employees', EmployeeController::class)->middleware(['role:HR,Developer']);
 
     // Resource routes for tasks
     Route::resource('tasks', TaskController::class)->middleware(['role:Developer,HR']);

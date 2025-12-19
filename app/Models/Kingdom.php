@@ -10,7 +10,7 @@ class Kingdom extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'kongdoms';
+    protected $table = 'kingdoms';
 
     protected $fillable = ['name'];
 

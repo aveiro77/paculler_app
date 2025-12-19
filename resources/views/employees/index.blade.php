@@ -12,14 +12,14 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Employees</h3>
-                <p class="text-subtitle text-muted">Manage employees data.</p>
+                <h3>Pacullers</h3>
+                <p class="text-subtitle text-muted">Manage pacullers data.</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item">Employees</li>
+                        <li class="breadcrumb-item">Pacullers</li>
                         <li class="breadcrumb-item active" aria-current="page">Index</li>
                     </ol>
                 </nav>
@@ -57,10 +57,8 @@
                         <tr>
                             <th>Fullname</th>
                             <th>Email</th>
-                            <th>Role</th>
-                            <th>Department</th>
                             <th>Status</th>
-                            <th>Salary</th>
+                            <th>Role</th>
                             <th>Option</th>
                         </tr>
                     </thead>
@@ -69,8 +67,6 @@
                             <tr>
                                 <td>{{ $employee->fullname }}</td>
                                 <td>{{ $employee->email }}</td>
-                                <td>{{ $employee->role->title }}</td>
-                                <td>{{ $employee->department->name }}</td>
                                 <td>
                                     @if($employee->status == 'inactive')
                                         <span class="text-warning">Inactive</span>
@@ -78,7 +74,7 @@
                                         <span class="text-success">Active</span>
                                     @endif
                                 </td>
-                                <td>{{ $employee->salary }}</td>
+                                <td>{{ $employee->role->title }}</td>
                                 <td>
                                     <a class="btn btn-info btn-sm" href="{{ route('employees.show', $employee->id) }}">View</a>
                                    <a href="{{ route('employees.edit', $employee->id) }}" class="btn btn-warning btn-sm">Edit</a>
