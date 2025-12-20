@@ -21,4 +21,9 @@ class Item extends Model
     {
         return $this->belongsTo(Kingdom::class, 'kingdom_id');
     }
+
+    public function projectDetails()
+    {
+        return $this->hasMany(ProjectDetail::class, 'item_id');
+    }
 }

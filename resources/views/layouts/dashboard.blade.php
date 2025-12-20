@@ -109,6 +109,13 @@
                         </li>
 
                         <li class="sidebar-item">
+                            <a href="{{ url('/projects') }}" class='sidebar-link'>
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+
+                        <li class="sidebar-item">
                             <a href="{{ url('/roles') }}" class='sidebar-link'>
                                 <i class="bi bi-check-circle-fill"></i>
                                 <span>Roles</span>
@@ -160,6 +167,7 @@
     <script src="{{ asset('mazer/assets/extensions/chart.js/chart.umd.js') }}"></script>
     <script src="{{ asset('mazer/assets/static/js/pages/ui-chartjs.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <script>
         let date = flatpickr(".date", {

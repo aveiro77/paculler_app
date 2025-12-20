@@ -97,10 +97,10 @@
                         </select>
                     </div>
         
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="salary" class="form-label">Salary</label>
                         <input type="number" name="salary" class="form-control" id="salary" required>
-                    </div>
+                    </div> -->
         
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>

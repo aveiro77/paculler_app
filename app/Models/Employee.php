@@ -36,4 +36,9 @@ class Employee extends Model
     {
         return $this->belongsTo(Role::class);
     }
+
+    public function projects()
+    {
+        return $this->hasMany(projects::class);
+    }
 }

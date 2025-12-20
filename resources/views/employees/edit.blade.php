@@ -12,14 +12,14 @@
     <div class="page-title">
         <div class="row">
             <div class="col-12 col-md-6 order-md-1 order-last">
-                <h3>Employees</h3>
-                <p class="text-subtitle text-muted">Manage employees data.</p>
+                <h3>Pacullers</h3>
+                <p class="text-subtitle text-muted">Manage pacullers data.</p>
             </div>
             <div class="col-12 col-md-6 order-md-2 order-first">
                 <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item">Employees</li>
+                        <li class="breadcrumb-item">Pacullers</li>
                         <li class="breadcrumb-item active" aria-current="page">Index</li>
                     </ol>
                 </nav>
@@ -67,7 +67,7 @@
                         <input type="text" name="phone_number" class="form-control" id="phone_number" value="{{ old('phone_number', $employee->phone_number) }}">
                     </div>
         
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="address" class="form-label">Address</label>
                         <input type="text" name="address" class="form-control" id="address" value="{{ old('address', $employee->address) }}" }}>
                     </div>
@@ -89,7 +89,7 @@
                                 <option value="{{ $department->id }}">{{ $department->name }}</option>
                             @endforeach
                         </select>
-                    </div>
+                    </div> -->
         
                     <div class="mb-3">
                         <label for="role_id" class="form-label">Role</label>
@@ -108,10 +108,10 @@
                         </select>
                     </div>
         
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="salary" class="form-label">Salary</label>
                         <input type="number" name="salary" class="form-control" id="salary" value="{{ old('salary', $employee->salary) }}" required>
-                    </div>
+                    </div> -->
         
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>

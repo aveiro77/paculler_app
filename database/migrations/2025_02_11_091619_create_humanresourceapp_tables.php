@@ -121,11 +121,34 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        Schema::create('projects', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->date('date');
+            $table->string('status');
+            $table->foreignId('employee_id')->constrained('employees');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+        Schema::create('project_details', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('project_id')->constrained('projects');
+            $table->foreignId('item_id')->constrained('items');
+            $table->integer('quantity');
+            $table->decimal('rate', 10, 2);
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     public function down()
     {
         // Drop all the tables in reverse order
+        Schema::dropIfExists('project_details');
+        Schema::dropIfExists('projects');
         Schema::dropIfExists('items');
         Schema::dropIfExists('kingdoms');
         Schema::dropIfExists('item_categories');

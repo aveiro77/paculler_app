@@ -14,6 +14,8 @@ use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\ItemCategoryController;
 use App\Http\Controllers\KingdomController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProjectsController;
 
 Route::get('/', [AuthenticatedSessionController::class, 'create']);
 
@@ -47,6 +49,9 @@ Route::middleware(['auth'])->group(function () {
 
     // Resource routes for presences (attendance)
     Route::resource('presences', PresencesController::class)->middleware(['role:Developer,HR']);
+
+    // Resource routes for presences (attendance)
+    Route::resource('projects', ProjectController::class)->middleware(['role:Developer,HR']);
     
     // Resource routes for leave requests
     Route::resource('leave-requests', LeaveRequestController::class)->middleware(['role:Developer,HR']);
